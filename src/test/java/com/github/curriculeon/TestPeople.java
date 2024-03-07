@@ -4,7 +4,7 @@ package com.github.curriculeon;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class PeopleTest {
+public class TestPeople {
     @Test
     public void testAdd(){
 

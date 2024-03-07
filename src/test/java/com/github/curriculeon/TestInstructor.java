@@ -1,10 +1,9 @@
 package com.github.curriculeon;
 
-import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class InstructorTest {
+public class TestInstructor {
     @Test
     public void testImplementation(){
         //given
