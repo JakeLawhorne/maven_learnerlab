@@ -9,8 +9,8 @@ public class TestPeople {
     public void testAdd(){
 
         //given
-        People people = new People();
-        Person person = new Person(null, null);
+        People people = Students.getInstance();
+        Student person = new Student(null, null);
         Assert.assertFalse(people.contains(person));
 
 
@@ -23,8 +23,8 @@ public class TestPeople {
     @Test
     public void testRemove(){
         //given
-        People people = new People();
-        Person person = new Person(null, null);
+        People people = Students.getInstance();
+        Instructor person = new Instructor(null, null);
         people.add(person);
         Assert.assertTrue(people.contains(person));
 
@@ -37,14 +37,14 @@ public class TestPeople {
     @Test
     public void testFindById(){
         //given
-        People people = new People();
-        Person person = new Person(1L, null);
-        Person expectedPerson = person;
-        people.add(person);
-        Assert.assertTrue(people.contains(person));
+        Long id = Long.MAX_VALUE;
+        People people = Students.getInstance();
+        Student expectedPerson = new Student(id, null);
+        people.add(expectedPerson);
+        Assert.assertTrue(people.contains(expectedPerson));
 
         //when
-        Person actualPerson = people.findById(1);
+        Person actualPerson = people.findById(id);
 
         //then
         Assert.assertEquals(expectedPerson, actualPerson);
